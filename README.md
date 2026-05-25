@@ -1,18 +1,52 @@
-# React + Vite
+🌾 Urban Harvest - Responsive Admin Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+    Urban Harvest is a modern, clean, and fully responsive Admin/Store Management Dashboard built for a fictional food delivery and grocery platform. This project was developed as part of the UI/UX Developer Fresher Assignment to demonstrate responsive design principles, clean component structure, and global state management.
 
-Currently, two official plugins are available:
+🚀 Live Features Implemented
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+1. Modern Login Page
+    Secure Flow: Structured form with Email & Password validation handles.
+    UX Remember Me: Built using native `localStorage` synchronization. If checked, the session persists across browser refreshes and tab closures without needing a backend token.
+    Auto-Redirect: Authenticated users are automatically guarded and pushed to the dashboard layout.
 
-## React Compiler
+ 2. Analytical Dashboard
+    Dynamic Sidebar: Responsive sliding overlay drawer on mobile viewports triggered via hamburger actions, adapting to a permanent fixed bar on desktop viewports ($1024\text{px}$ and up).
+    Summary Metrics: High-fidelity visual cards showing operational stats like Total Orders, Revenue, Active Users, and Pending Deliveries.
+    Data Presentation: Clean structured table mapping recent customer transactions equipped with responsive overflow styling vectors (`overflow-x-auto`).
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+3. Inventory & Product Management
+    Global State Sync: Fully powered by **Redux Toolkit (`@reduxjs/toolkit`)**. Adding a new product immediately populates state tables globally.
+    Instant Filters: Interactive search query field combined with stock status dropdowns (*All, Available, Out of Stock*) updates views in real-time.
+    Form Modals: Beautiful inline overlay forms styled with backdrop-blur metrics (`backdrop-blur-xs`) for sleek UX transitions.
 
-Note: This will impact Vite dev & build performances.
 
-## Expanding the ESLint configuration
+🛠️ Tech Stack & Architecture 
+    Frontend Framework: React JS (v19/v18)
+    State Management: Redux Toolkit & React-Redux
+    Routing: React Router DOM (v6)
+    Styling Engine: Tailwind CSS
+    Design Pattern: Atomic folder architecture split into clean reusable layout slots (`/components`, `/pages`, `/redux`).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Install Dependencies
+    npm install
+        (This will install all the dependencies like @reduxjs/toolkit, react,redux, react-router-dom, and  Tailwindcss)
+    npm run dev
+
+
+📂 Project Directory Map
+    src/
+    ├── components/
+    │   ├── Card.jsx
+    │   ├── Header.jsx
+    │   └── Sidebar.jsx
+    ├── pages/
+    │   ├── Login.jsx
+    │   ├── Dashboard.jsx
+    │   └── ProductManagement.jsx
+    ├── redux/
+    │   ├── store.js
+    │   ├── authSlice.js
+    │   └── productSlice.js
+    ├── App.jsx
+    ├── main.jsx
+    └── index.css
